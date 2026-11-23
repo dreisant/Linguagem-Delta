@@ -1,0 +1,37 @@
+# Arquivo: teste_completo.dt
+# Teste abrangente dos diferenciais e operadores da linguagem Delta
+
+val _limite_superior: int = 100;
+var _contador_1: int = 0;
+var resultado_pot: int;
+var escolha_simples: float;
+var escolha_aninhada: int;
+var escolha_parenteses: int;
+
+# Potenciacao com associatividade a direita (2 ^ (3 ^ 2))
+resultado_pot = 2 ^ 3 ^ 2;
+
+# Condicional orientado a expressoes (simples e com expressao no ramo else)
+escolha_simples = if (resultado_pot >= 512) 1.5 else 0.5 + 1.0;
+
+# Expressao condicional aninhada e com parenteses em subexpressao
+escolha_aninhada = if (_contador_1 == 0) if (_limite_superior != 0) 10 else 20 else 30;
+escolha_parenteses = (if (_contador_1 < 5) 2 else 4) * 3;
+
+# Todos os operadores relacionais (==, !=, <, <=, >, >=) e if sem else
+if (_contador_1 <= 10) {
+    print(escolha_simples);
+}
+
+if (resultado_pot > 0) {
+    while (_contador_1 < 3) {
+        _contador_1 = _contador_1 + 1;
+        print(_contador_1);
+    }
+}
+
+if (_contador_1 == 3) {
+    print(escolha_aninhada);
+} else {
+    print(escolha_parenteses);
+}

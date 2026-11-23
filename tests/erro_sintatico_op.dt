@@ -1,0 +1,3 @@
+# Arquivo: erro_sintatico_op.dt
+var x: int = 10;
+x = 5 + * 2; # ERRO SINTATICO: dois operadores consecutivos sem operando

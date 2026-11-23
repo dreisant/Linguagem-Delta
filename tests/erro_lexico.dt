@@ -1,0 +1,3 @@
+# Arquivo: erro_lexico.dt
+var saldo: float = 100.0;
+saldo = saldo @ 2.0; # ERRO LEXICO: caractere '@' nao reconhecido pelo Flex

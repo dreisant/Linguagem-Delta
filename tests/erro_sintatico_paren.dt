@@ -1,0 +1,5 @@
+# Arquivo: erro_sintatico_paren.dt
+var x: int = 10;
+while (x > 0 { # ERRO SINTATICO: ausencia de parentese de fechamento ')'
+    x = x - 1;
+}

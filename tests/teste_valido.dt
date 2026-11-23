@@ -1,0 +1,37 @@
+# Arquivo: teste_valido.dt
+# Caso de teste completo para a linguagem Delta
+
+val base: float = 2.0;
+val expoente: int = 3;
+
+var passo: int = 2;
+var divisor: int = 4;
+var contagem: int;
+var divReal: float;
+var divInteira: int;
+var resultadoComplexo: float;
+
+# Divisao inteira com // (retorna int: 7 // 2 = 3)
+divInteira = 7 // passo;
+
+# Divisao real com / (retorna float: 7 / 2 = 3.5)
+divReal = 7 / passo;
+
+# Expressao combinando potencia (^), multiplicacao (*), divisao real (/), soma e subtracao
+# (2.0 ^ 3 * 10.0) / 4 - (3.5 + 1.0) = (8.0 * 10.0) / 4 - 4.5 = 20.0 - 4.5 = 15.5
+resultadoComplexo = (base ^ expoente * 10.0) / divisor - (divReal + 1.0);
+
+print(divInteira);
+print(divReal);
+print(resultadoComplexo);
+
+# Estrutura de selecao e repeticao baseada no resultado
+if (resultadoComplexo > 10.0) {
+    contagem = divInteira;
+    while (contagem > 0) {
+        print(contagem);
+        contagem = contagem - 1;
+    }
+} else {
+    print(0);
+}
